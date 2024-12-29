@@ -1,5 +1,7 @@
 :root {
     --blue-black: #0D1B2A;
+
+    --bs-body-font-size: 1.4rem;
 }
 .bd {
     border: 1px solid black;
@@ -46,8 +48,53 @@
     padding-bottom: 1.2vh;
 }
 
+/*Shop Elements*/
 
-.accordion-button {
+.shop-items .accordion-button {
     font-size: min(5vw, 40px);
 
 }
+
+.shop-items .row {
+    justify-content: flex-start;
+}
+
+.shop-items .card-img-top {
+    border-bottom: solid 1px var(--bs-border-color);
+    height: 60vw;
+    object-fit: cover;
+}
+
+.shop-items .card {
+    height: fit-content;
+}
+
+.in-stock {
+    color: var(--bs-success);
+}
+
+.no-stock {
+    color: var(--bs-danger);
+}
+
+.shop-items .card-title {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+
+/*When Screen is bigger than 768px */
+@media (min-width: 768px) {
+    .row-cols-md-5 > * {
+      width: 25%;
+    }
+
+    .shop-items .card {
+        height: 100%;
+    }
+    .shop-items .card-img-top {
+        height: 20vw;
+        object-fit: cover;
+    }
+    
+  }

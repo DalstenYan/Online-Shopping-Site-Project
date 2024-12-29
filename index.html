@@ -52,16 +52,71 @@
                 <h2>Created by Dalsten Yan</h2>
             </div>
         </div>
-
-        <div class="accordion" id="accordionPanelsStayOpenExample">
+        <!--Accordion-->
+        <div class="accordion shop-items" id="accordionPanelsStayOpenExample">
           <div class="accordion-item fruits" id="Fruits">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
                 All Fruits
               </button>
             </h2>
-            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" style="">
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
               <div class="accordion-body">
+                <!--Fruits Cards-->
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+                  <div class="col">
+                    <div class="card">
+                      <img src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Apple</h5>
+                        <p class="card-text">$6.99 • <span class="stock in-stock">In Stock</span></p>
+                        <button class="btn btn-outline-success" >Add to Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Banana</h5>
+                        <p class="card-text">$1.99 • <span class="stock in-stock">In Stock</span></p>
+                        <button class="btn btn-outline-success" >Add to Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="https://images.pexels.com/photos/131054/pexels-photo-131054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Blueberry</h5>
+                        <p class="card-text">$4.99 • <span class="stock in-stock">In Stock</span></p>
+                        <a href="#" class="btn btn-outline-success">Add to Cart</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="https://images.pexels.com/photos/7065188/pexels-photo-7065188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Cantaloupe</h5>
+                        <p class="card-text">$8.99 • <span class="stock no-stock">Out of Stock</span></p>
+                        <button class="btn btn-outline-danger disabled" >Cannot Add</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="https://images.pexels.com/photos/768009/pexels-photo-768009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Cherry</h5>
+                        <p class="card-text">$3.99 • <span class="stock in-stock">In Stock</span></p>
+                        <button class="btn btn-outline-success" >Add to Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--End of Fruits Cards-->
+
                 <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
               </div>
             </div>
@@ -72,7 +127,7 @@
                 All Vegetables
               </button>
             </h2>
-            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" style="">
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
               <div class="accordion-body">
                 <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
               </div>
@@ -93,7 +148,5 @@
         </div>
     </div>
 </body>
-<footer>
-  <a href="https://coolors.co/palette/0d1b2a-1b263b-415a77-778da9-e0e1dd">My Color Palette</a>
-</footer>
+
 </html>
