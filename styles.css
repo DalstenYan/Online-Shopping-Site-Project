@@ -45,26 +45,27 @@ footer {
     display: flex;
     width: 100%;
     height: 35vh;
-    margin: 0 auto;
     background-color: var(--blue-black);
+    justify-content: center;
+    text-align: center;
 }
 
 .introblock * {
     color: white;
-    text-align: center;
+    padding: 0 5px;
 }
 
+/*To align vertical center*/
 .introtext {
-    text-align: center;
-    margin: auto;
+    margin: auto 0;
 }
 
 .introtext h1 {
-    font-size: 5vw;
+    font-size: 1.6em;
 }
 
 .introtext h2 {
-    font-size: 3.5vw;
+    font-size: 1.2em;
     border-bottom: 3px inset black;
     padding-bottom: 1.2vh;
 }
@@ -73,6 +74,7 @@ footer {
 
 .shop-items .accordion-button {
     font-size: min(5vw, 40px);
+    font-size: 1.1em;
 
 }
 
@@ -109,6 +111,39 @@ footer {
     color: white;
 }
 
+.info-collapse
+{
+    margin-top: 10px;
+}
+
+.info-collapse .card-body 
+{
+    width:100%;
+    padding: 10px;
+    font-size: 0.9em;
+    max-height: 300px;
+}
+
+#shop-icon {
+    display: flex;
+    z-index: 999;
+    position: fixed;
+    bottom: 15px;
+    left:15px;
+    border-radius: 100%;
+}
+
+#shop-icon button 
+{
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    align-items: center;
+}
+#shop-icon img 
+{
+    max-width: 35px;
+}
+
 
 /*When Screen is bigger than 768px */
 @media (min-width: 768px) {
@@ -123,6 +158,13 @@ footer {
     .shop-items .card-img-top {
         height: 20vw;
         object-fit: cover;
+    }
+    .introtext h1 {
+        font-size: 2.6em;
+    }
+    
+    .introtext h2 {
+        font-size: 1.7em;
     }
     
   }
