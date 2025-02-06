@@ -80,6 +80,7 @@ footer {
 
 .shop-items .row {
     justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .shop-items .card-img-top {
