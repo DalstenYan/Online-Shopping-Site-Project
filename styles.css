@@ -89,10 +89,17 @@ footer {
     object-fit: cover;
 }
 
+.shop-items .card:hover{
+    box-shadow: 4px 4px 6px rgb(181, 181, 181);
+    border-color: rgb(45, 45, 45);
+}
+
 .shop-items .card {
     height: fit-content;
     width: 110%;
 }
+
+
 
 .in-stock {
     color: var(--bs-success);
