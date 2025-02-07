@@ -62,12 +62,11 @@
         </div>
         
         <div id="shop-icon">
-          <button type="button" class="btn btn-info position-relative">
-            <img src="https://cdn-icons-png.flaticon.com/512/3770/3770807.png">
-            <span class="position-absolute translate-middle badge rounded-pill bg-danger">
-              0
-              <span class="visually-hidden">unread messages</span>
-            </span>
+          <button class="btn" id="cart-img">
+            <!--Button doesn't extend all the way unfortunately-->
+              <span class="position-absolute start-90 translate-middle badge rounded-pill bg-danger" id="#items-badge">
+                0
+              </span>
           </button>
         </div>
         
@@ -207,8 +206,37 @@
                       <img src="https://images.pexels.com/photos/7065188/pexels-photo-7065188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h5 class="card-title">Cantaloupe</h5>
-                        <p class="card-text">$8.99 • <span class="stock no-stock">Out of Stock</span></p>
+                        <p class="card-text">$8.99 • <span class="stock no-stock">No Stock</span></p>
                         <button class="btn btn-outline-danger disabled" >Cannot Add</button>
+
+                        <!--Dropdown Section-->
+                        <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-4" aria-expanded="false" aria-controls="collapse-section-4">
+                          Info
+                        </button>
+                        <div class="collapse info-collapse" id="collapse-section-4">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="fw-bold">Calories</div>
+                              110 per serving</li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Sugars</div>
+                              19 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Potassium</div>
+                              450 miligrams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Carbs</div>
+                              30 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Fibers</div>
+                              3 grams
+                            </li>
+                          </ul>
+                        </div>
+                        <!--End Dropdown Section-->
                       </div>
                     </div>
                   </div>
