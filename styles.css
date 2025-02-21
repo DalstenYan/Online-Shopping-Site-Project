@@ -101,6 +101,7 @@ footer {
 .shop-items .card {
     height: fit-content;
     width: 110%;
+    transition: border-color 0.25s, box-shadow 0.25s;
 }
 
 
@@ -143,31 +144,64 @@ footer {
     bottom: 0;
     left: 0;
     width: 60px;
-    background-color: var(--professional-blue);
+    background: radial-gradient(cyan, var(--professional-blue));
     aspect-ratio: 1/1;
     margin: 10px;
     border-radius: 100%;
-    padding:8px
+    padding: 10px;
+    padding-top: 9px;
+    outline: solid 4px transparent;
+    transition: outline 0.25s ease-in-out;
 }
 #cart-img 
 {
     width: 100%;
     height: 100%;
-    background-image: url(https://cdn-icons-png.flaticon.com/512/3770/3770807.png);
+    background-image: url(https://cdn-icons-png.flaticon.com/512/4297/4297127.png);
     background-size:contain;
     background-repeat:no-repeat;
-    background-color: none;
     border: none;
+    margin-bottom: 1px;
+}
+
+/*Off Canvas stuff*/
+.offcanvas.offcanvas-top, .offcanvas-body 
+{
+    height: fit-content;
+}
+
+.offcanvas-body 
+{
+    background-color: rgb(241, 239, 239);
+}
+
+.offcanvas-body .card 
+{
+    border: none;
+}
+
+.added-item-card, .added-item-img{
+    width: 100%;
+    border-radius: .375rem;
+    
+}
+
+.added-item-img {
+    padding: inherit;
+    margin: auto;
+    display: block;
+    max-height: 200px;
+    object-fit: scale-down;
 }
 
 #shop-icon:hover
 {
-    outline: solid 4px white;
-    transition: outline-width 0.2s ease;
+    outline: solid 4px rgb(230, 230, 230);
+    
 }
 #shop-icon:hover #cart-img
 {
-    background-image: url(https://cdn-user-icons.flaticon.com/82988/82988262/1738923781912.svg?token=exp=1738924683~hmac=ec73e9b707819d6e396d65e1ed557060);
+    background-image: url(https://cdn-icons-png.flaticon.com/512/4297/4297127.png);
 }
 
 
@@ -191,6 +225,14 @@ footer {
     
     .introtext h2 {
         font-size: 1.7em;
+    }
+
+    .added-item-img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
     }
     
   }
