@@ -6,6 +6,7 @@ class Item {
         this.inStock = inStock;
         this.description = description;
         this.imgURL = imgURL;
+        this.userQuantity = 0;
     }
 }
 
@@ -15,13 +16,15 @@ const cartQuantityBadge = document.querySelector(".badge");
 //offcanvas item added elements
 const addedItemName = document.querySelector(".added-item-name");
 const addedItemDesc = document.querySelector(".added-item-desc");
-const addedItemImg = document.querySelector(".added-item-img");
+const addedItemImgDiv = document.querySelector(".added-item-img-container")
 const addedItemPrice = document.querySelector(".added-item-price");
+const addedItemExistingQuantity = document.querySelector(".added-item-existing-quantity");
 
 const addedItemQuantity = document.querySelector(".added-item-quantity");
 
 //tracker variables
 let prevSetQuantityNumber = 1;
+let currentItem = null;
 
 let cartQuantity = 0;
 
@@ -75,9 +78,9 @@ function addItemToCart(itemName)
     let itemQuery = shopItems.find(i => i.name === itemName)
     if(checkItemExistsAndHasStock(itemQuery)) 
     {
-        resetAddedItemQuantity()
-        displayAddedItem(itemQuery);
-        changeTotalItemsQuantity();
+        resetAddedItemQuantity();
+        currentItem = itemQuery;
+        changeAllQuantities(1);
     }
     else 
     {
@@ -85,55 +88,65 @@ function addItemToCart(itemName)
     }
 }
 
-//deprecated
-function increaseItemQuantity(quantity = 1) {
-    cartQuantity += quantity;
-    cartQuantityBadge.innerText = cartQuantity;
-}
-
-function decreaseItemQuantity(quantity = 1) {
-    cartQuantity -= quantity;
-    cartQuantityBadge.innerText = cartQuantity;
-}
-
-//function to update the number on the shopping cart badge
-function changeTotalItemsQuantity(quantity = 1) 
+function displayAddedItem()
 {
-    cartQuantity += quantity;
-    cartQuantityBadge.innerText = cartQuantity;
-}
-
-function displayAddedItem(item)
-{
-    addedItemName.innerText = item.name;
-    addedItemDesc.innerText = item.description === "" ? "No description provided for this item." : item.description;
-    addedItemImg.src = item.imgURL;
-    addedItemPrice.innerText = `Item Price: $${item.price}`;
+    addedItemName.innerText = currentItem.name;
+    addedItemDesc.innerText = currentItem.description === "" ? "No description provided for this item." : currentItem.description;
+    addedItemImgDiv.style.backgroundImage = `url(${currentItem.imgURL})`;
+    addedItemPrice.innerText = `Item Price: $${currentItem.price}`;
+    addedItemExistingQuantity.innerText = `In Cart: ${currentItem.userQuantity}`
 }
 
 function displayNoItem() 
 {
     addedItemName.innerText = "Item Name";
     addedItemDesc.innerText = "Item Description";
-    addedItemImg.src = "";
+    addedItemImgDiv.style.backgroundImage = `url("")`
     addedItemPrice.innerText = `Item Price: Not Specified`;
+    addedItemExistingQuantity.innerText = `In Cart: Unknown`
 }
 
+//From user input in the number field
 function changeAddedItemQuantity(newQuantityString) 
 {
     let newSetQuantityNumber = parseInt(newQuantityString);
 
-    changeTotalItemsQuantity(newSetQuantityNumber - prevSetQuantityNumber);
+    let totalSelectedItemQuantity = newSetQuantityNumber - currentItem.userQuantity;
 
-    prevSetQuantityNumber = newSetQuantityNumber;
+    changeAllQuantities(totalSelectedItemQuantity);
+
+    currentItem.userQuantity = newSetQuantityNumber;
 }
 
+//Reset count
 function resetAddedItemQuantity() 
 {
     prevSetQuantityNumber = 1;
     addedItemQuantity.value = 1;
 }
 
+//From the (+) and (-) buttons
+function buttonClickQuantityChange(valueChange) 
+{
+    let quantityValueChange = currentItem.userQuantity + valueChange
+    if(quantityValueChange < 0 || quantityValueChange> 99) 
+        return;
+    addedItemQuantity.value = quantityValueChange;
+    changeAllQuantities(valueChange);
+}
+
+function changeAllQuantities(newQuantity) 
+{
+    //1. update item's quantity
+    currentItem.userQuantity += newQuantity;
+    displayAddedItem();
+
+    //2. update total cart items quantity
+    cartQuantity += newQuantity;
+    cartQuantityBadge.innerText = cartQuantity;
+}
+
+//Internal Validation Logic
 function checkItemExistsAndHasStock(item) 
 {
     if(item == null || item == undefined) 
