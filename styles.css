@@ -149,7 +149,6 @@ footer {
     margin: 10px;
     border-radius: 100%;
     padding: 10px;
-    padding-top: 9px;
     outline: solid 4px transparent;
     transition: outline 0.25s ease-in-out;
 }
@@ -161,13 +160,13 @@ footer {
     background-size:contain;
     background-repeat:no-repeat;
     border: none;
-    margin-bottom: 1px;
 }
 
 /*Off Canvas stuff*/
 .offcanvas.offcanvas-top, .offcanvas-body 
 {
     height: fit-content;
+    max-height: 45vh;
 }
 
 .offcanvas-body 
@@ -183,16 +182,69 @@ footer {
 .added-item-card, .added-item-img{
     width: 100%;
     border-radius: .375rem;
-    
 }
+
 
 .added-item-img {
     padding: inherit;
     margin: auto;
+    max-width: 250px;
     display: block;
-    max-height: 200px;
-    object-fit: scale-down;
+    object-fit: cover;
+    border-radius: 0;
 }
+
+.added-item-img-container 
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+.added-item-quantity {
+    width: fit-content;
+    min-width: 19px;
+    max-width: 50px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.added-item-quantity-change-container {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.quantity-flex-responsive {
+    display: flex;
+    justify-content: center;
+    padding: 15px 10px;
+    border: 3px solid var(--bs-border-color);
+    gap: 5px;
+}
+
+.quantity-button {
+    width: 50%;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 4px;
+    padding-bottom: 10px;
+    min-width: 40px;
+}
+
+.outlined-module {
+    width: fit-content;
+}
+
+
+.flex {
+    display: flex;
+}
+
+/*Shop icon stuff */
 
 #shop-icon:hover
 {
@@ -227,12 +279,35 @@ footer {
         font-size: 1.7em;
     }
 
+    /*Deprecated method below */
     .added-item-img {
-        width: 100%;
         object-fit: cover;
-        height: 100%;
+        height: 235px;
+        max-width: none;
+        border-radius: .375rem;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
-    
+
+    .added-item-img-container 
+    {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+    }
+
+    .added-item-quantity-change-container {
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .added-item-quantity {
+        padding: 0.5em;
+        width: fit-content;
+        min-width: 36px;
+    }
   }
