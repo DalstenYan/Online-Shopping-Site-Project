@@ -44,6 +44,25 @@ footer {
     display:table-row;
 }
 
+.nav-btn {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    width: 100%;
+    text-align: left;
+}
+
+.small-hover-text {
+    font-style: italic;
+    color: transparent;
+    transition: color 0.25s;
+    font-size: 0.75em;
+}
+
+.nav-link:hover .small-hover-text {
+    color: var(--bs-nav-link-color);
+}
+
 /*Welcome Section*/
 .introblock {
     display: flex;
