@@ -12,50 +12,49 @@
 <body>
   <!--Navigation Bar-->
     <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <div class="logotitle">
-                <img src="https://cdn-icons-png.flaticon.com/256/3514/3514242.png" alt="Logo" width="30" height="100%" class="align-text-top">
-                  BuyMart Online Shopping
-              </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#Introblock">Welcome</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#Fruits">
-                    <button class="nav-btn nav-link" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-                      Fruits&nbsp;&nbsp;&nbsp;<span class="small-hover-text">click to open Fruits section</span></button>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#Vegetables">
-                    <button class="nav-btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                      Vegetables&nbsp;&nbsp;&nbsp;<span class="small-hover-text">click to open Vegetables section</span></button>
-                  </a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown link
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-              </ul>
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <div class="logotitle">
+              <img src="https://cdn-icons-png.flaticon.com/256/3514/3514242.png" alt="Logo" width="30" height="100%" class="align-text-top">
+                BuyMart Online Shopping
             </div>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#Introblock">Welcome</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Fruits">
+                  <button class="nav-btn nav-link" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                    Fruits&nbsp;&nbsp;&nbsp;<span class="small-hover-text">click to open Fruits section</span></button>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Vegetables">
+                  <button class="nav-btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    Vegetables&nbsp;&nbsp;&nbsp;<span class="small-hover-text">click to open Vegetables section</span></button>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown link
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
           </div>
-        
-      </nav>
-    <div class="main">
+      </div>
+    </nav>
+    <div class=""></div>
+    <div class="main">  
         <div class="introblock" id="Introblock">
             <div class="introtext">
                 <h1>The Online Shopping Experience</h1>
@@ -64,7 +63,7 @@
         
         </div>
         <div>
-          <h3 style="text-align: center; padding: 10px 0;">This webpage is responsive! Try resizing the window</h3>
+          <h3 class="responsive-notice">This webpage is responsive! Try resizing the window</h3>
         </div>
 
         <!--
@@ -106,7 +105,7 @@
         </div>
         
         <!--Items Accordion-->
-        <div class="accordion shop-items" id="accordionPanelsStayOpenExample">
+        <div class="accordion accordion-flush shop-items" id="accordionPanelsStayOpenExample">
 
           <!--Fruits Section Start-->
           <div class="fruits accordion-item" id="Fruits">
@@ -122,7 +121,14 @@
                 <div class="row row-cols-2 row-cols-md-4 g-4">
                   <div class="col">
                     <div class="card">
-                      <img src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Malus Domestica</h2>
+                          <p>Our ruby-red apples will be sure to provide a tasty burst of flavor and they won't rot for a long period of time!</p>
+                        </div>
+                      </div>
+                      
                       <div class="card-body">
                         <h5 class="card-title">Apple</h5>
                         <p class="card-text">$6.99 • <span class="stock in-stock">In Stock</span></p>
@@ -160,7 +166,13 @@
                   </div>
                   <div class="col">
                     <div class="card">
-                      <img src="https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Musa acuminata Colla</h2>
+                          <p>These signature yellow fruits will provide an even more exceptional taste due to the special tropics that they were carefully cultivated in.</p>
+                        </div>
+                      </div>
                       <div class="card-body">
                         <h5 class="card-title">Banana</h5>
                         <p class="card-text">$1.99 • <span class="stock in-stock">In Stock</span></p>
@@ -199,7 +211,13 @@
                   </div>
                   <div class="col">
                     <div class="card">
-                      <img src="https://images.pexels.com/photos/131054/pexels-photo-131054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/131054/pexels-photo-131054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Vaccinium corymbosum</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur doloremque aut ea vitae eius harum odit saepe maiores ullam error quis eligendi vero, sunt sit sapiente iusto delectus eum!</p>
+                        </div>
+                      </div>
                       <div class="card-body">
                         <h5 class="card-title">Blueberry</h5>
                         <p class="card-text">$4.99 • <span class="stock in-stock">In Stock</span></p>
@@ -238,7 +256,13 @@
                   </div>
                   <div class="col">
                     <div class="card">
-                      <img src="https://images.pexels.com/photos/7065188/pexels-photo-7065188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/7065188/pexels-photo-7065188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Cucumis melo var. cantalupensis</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur doloremque aut ea vitae eius harum odit saepe maiores ullam error quis eligendi vero, sunt sit sapiente iusto delectus eum!</p>
+                        </div>
+                      </div>
                       <div class="card-body">
                         <h5 class="card-title">Cantaloupe</h5>
                         <p class="card-text">$8.99 • <span class="stock no-stock">No Stock</span></p>
@@ -277,7 +301,13 @@
                   </div>
                   <div class="col">
                     <div class="card">
-                      <img src="https://images.pexels.com/photos/768009/pexels-photo-768009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/768009/pexels-photo-768009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Prunus avium</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur doloremque aut ea vitae eius harum odit saepe maiores ullam error quis eligendi vero, sunt sit sapiente iusto delectus eum!</p>
+                        </div>
+                      </div>
                       <div class="card-body">
                         <h5 class="card-title">Cherry</h5>
                         <p class="card-text">$3.99 • <span class="stock in-stock">In Stock</span></p>
@@ -315,16 +345,110 @@
                   </div>
                   <div class="col">
                     <div class="card">
-                      <img src="https://images.pexels.com/photos/8093196/pexels-photo-8093196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="...">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/9228152/pexels-photo-9228152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Citrus sinensis</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur doloremque aut ea vitae eius harum odit saepe maiores ullam error quis eligendi vero, sunt sit sapiente iusto delectus eum!</p>
+                        </div>
+                      </div>
                       <div class="card-body">
-                        <h5 class="card-title">Pineapple</h5>
-                        <p class="card-text">$2.49 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success" onclick="addItemToCart('Pineapple')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <h5 class="card-title">Orange</h5>
+                        <p class="card-text">$3.99 • <span class="stock in-stock">In Stock</span></p>
+                        <button class="btn btn-outline-success" onclick="addItemToCart('Orange')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-6" aria-expanded="false" aria-controls="collapse-section-6">
                           Info
                         </button>
                         <div class="collapse info-collapse" id="collapse-section-6">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="fw-bold">Calories</div>
+                              30 per serving</li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Sugars</div>
+                              14 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Potassium</div>
+                              250 miligrams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Carbs</div>
+                              19 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Fibers</div>
+                              3 grams
+                            </li>
+                          </ul>
+                        </div>
+                        <!--End Dropdown Section-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/8093196/pexels-photo-8093196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Ananas comosus</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur doloremque aut ea vitae eius harum odit saepe maiores ullam error quis eligendi vero, sunt sit sapiente iusto delectus eum!</p>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Pineapple</h5>
+                        <p class="card-text">$2.49 • <span class="stock in-stock">In Stock</span></p>
+                        <button class="btn btn-outline-success" onclick="addItemToCart('Pineapple')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <!--Dropdown Section-->
+                        <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-7" aria-expanded="false" aria-controls="collapse-section-7">
+                          Info
+                        </button>
+                        <div class="collapse info-collapse" id="collapse-section-7">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="fw-bold">Calories</div>
+                              100 per serving</li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Sugars</div>
+                              16 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Potassium</div>
+                              350 miligrams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Carbs</div>
+                              26 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Fibers</div>
+                              1 grams
+                            </li>
+                          </ul>
+                        </div>
+                        <!--End Dropdown Section-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/25482631/pexels-photo-25482631/free-photo-of-watermelon-on-white-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Citrullus lanatus</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur doloremque aut ea vitae eius harum odit saepe maiores ullam error quis eligendi vero, sunt sit sapiente iusto delectus eum!</p>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Watermelon</h5>
+                        <p class="card-text">$5.49 • <span class="stock in-stock">In Stock</span></p>
+                        <button class="btn btn-outline-success" onclick="addItemToCart('Watermelon')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <!--Dropdown Section-->
+                        <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-8" aria-expanded="false" aria-controls="collapse-section-8">
+                          Info
+                        </button>
+                        <div class="collapse info-collapse" id="collapse-section-8">
                           <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                               <div class="fw-bold">Calories</div>
@@ -369,6 +493,366 @@
             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
               <div class="accordion-body">
                 <!--Vegetables Cards-->
+                <!--CURRENT STATUS: HIDDEN, REMOVE HIDE PUBLICLY-->
+                <div class="row row-cols-2 row-cols-md-4 g-4 hide-publicly">
+                  <div class="col">
+                    <div class="card">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/5621248/pexels-photo-5621248.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Vegetable Name</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur doloremque aut ea vitae eius harum odit saepe maiores ullam error quis eligendi vero, sunt sit sapiente iusto delectus eum!</p>
+                        </div>
+                      </div>
+                      
+                      <div class="card-body">
+                        <h5 class="card-title">Carrot</h5>
+                        <p class="card-text">$1.99 • <span class="stock in-stock">In Stock</span></p>
+                        <button class="btn btn-outline-success" onclick="addItemToCart('Carrot')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        
+                        <!--Dropdown test-->
+                        <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-v1" aria-expanded="false" aria-controls="collapse-section-v1">
+                          Info
+                        </button>
+                        <div class="collapse info-collapse" id="collapse-section-v1">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="fw-bold">Calories</div>
+                              130 per serving</li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Sugars</div>
+                              25 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Potassium</div>
+                              200 miligrams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Carbs</div>
+                              34 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Fibers</div>
+                              5 grams
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Fruit Name</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur doloremque aut ea vitae eius harum odit saepe maiores ullam error quis eligendi vero, sunt sit sapiente iusto delectus eum!</p>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Banana</h5>
+                        <p class="card-text">$1.99 • <span class="stock in-stock">In Stock</span></p>
+                        <button class="btn btn-outline-success" onclick="addItemToCart('Banana')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+
+                        <!--Dropdown Section-->
+                        <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-2" aria-expanded="false" aria-controls="collapse-section-2">
+                          Info
+                        </button>
+                        <div class="collapse info-collapse" id="collapse-section-2">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="fw-bold">Calories</div>
+                              110 per serving</li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Sugars</div>
+                              19 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Potassium</div>
+                              450 miligrams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Carbs</div>
+                              30 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Fibers</div>
+                              3 grams
+                            </li>
+                          </ul>
+                        </div>
+                        <!--End Dropdown Section-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/131054/pexels-photo-131054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Fruit Name</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur doloremque aut ea vitae eius harum odit saepe maiores ullam error quis eligendi vero, sunt sit sapiente iusto delectus eum!</p>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Blueberry</h5>
+                        <p class="card-text">$4.99 • <span class="stock in-stock">In Stock</span></p>
+                        <button class="btn btn-outline-success" onclick="addItemToCart('Blueberry')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+
+                        <!--Dropdown Section-->
+                        <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-3" aria-expanded="false" aria-controls="collapse-section-3">
+                          Info
+                        </button>
+                        <div class="collapse info-collapse" id="collapse-section-3">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="fw-bold">Calories</div>
+                              110 per serving</li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Sugars</div>
+                              19 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Potassium</div>
+                              450 miligrams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Carbs</div>
+                              30 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Fibers</div>
+                              3 grams
+                            </li>
+                          </ul>
+                        </div>
+                        <!--End Dropdown Section-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/7065188/pexels-photo-7065188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Fruit Name</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur doloremque aut ea vitae eius harum odit saepe maiores ullam error quis eligendi vero, sunt sit sapiente iusto delectus eum!</p>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Cantaloupe</h5>
+                        <p class="card-text">$8.99 • <span class="stock no-stock">No Stock</span></p>
+                        <button class="btn btn-outline-danger disabled" onclick="addItemToCart('Cantaloupe')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Cannot Add</button>
+
+                        <!--Dropdown Section-->
+                        <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-4" aria-expanded="false" aria-controls="collapse-section-4">
+                          Info
+                        </button>
+                        <div class="collapse info-collapse" id="collapse-section-4">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="fw-bold">Calories</div>
+                              110 per serving</li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Sugars</div>
+                              19 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Potassium</div>
+                              450 miligrams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Carbs</div>
+                              30 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Fibers</div>
+                              3 grams
+                            </li>
+                          </ul>
+                        </div>
+                        <!--End Dropdown Section-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/768009/pexels-photo-768009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Fruit Name</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur doloremque aut ea vitae eius harum odit saepe maiores ullam error quis eligendi vero, sunt sit sapiente iusto delectus eum!</p>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Cherry</h5>
+                        <p class="card-text">$3.99 • <span class="stock in-stock">In Stock</span></p>
+                        <button class="btn btn-outline-success" onclick="addItemToCart('Cherry')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <!--Dropdown Section-->
+                        <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-5" aria-expanded="false" aria-controls="collapse-section-5">
+                          Info
+                        </button>
+                        <div class="collapse info-collapse" id="collapse-section-5">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="fw-bold">Calories</div>
+                              100 per serving</li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Sugars</div>
+                              16 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Potassium</div>
+                              350 miligrams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Carbs</div>
+                              26 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Fibers</div>
+                              1 grams
+                            </li>
+                          </ul>
+                        </div>
+                        <!--End Dropdown Section-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/9228152/pexels-photo-9228152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Fruit Name</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur doloremque aut ea vitae eius harum odit saepe maiores ullam error quis eligendi vero, sunt sit sapiente iusto delectus eum!</p>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Orange</h5>
+                        <p class="card-text">$3.99 • <span class="stock in-stock">In Stock</span></p>
+                        <button class="btn btn-outline-success" onclick="addItemToCart('Orange')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <!--Dropdown Section-->
+                        <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-6" aria-expanded="false" aria-controls="collapse-section-6">
+                          Info
+                        </button>
+                        <div class="collapse info-collapse" id="collapse-section-6">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="fw-bold">Calories</div>
+                              30 per serving</li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Sugars</div>
+                              14 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Potassium</div>
+                              250 miligrams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Carbs</div>
+                              19 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Fibers</div>
+                              3 grams
+                            </li>
+                          </ul>
+                        </div>
+                        <!--End Dropdown Section-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/8093196/pexels-photo-8093196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Fruit Name</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur doloremque aut ea vitae eius harum odit saepe maiores ullam error quis eligendi vero, sunt sit sapiente iusto delectus eum!</p>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Pineapple</h5>
+                        <p class="card-text">$2.49 • <span class="stock in-stock">In Stock</span></p>
+                        <button class="btn btn-outline-success" onclick="addItemToCart('Pineapple')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <!--Dropdown Section-->
+                        <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-7" aria-expanded="false" aria-controls="collapse-section-7">
+                          Info
+                        </button>
+                        <div class="collapse info-collapse" id="collapse-section-7">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="fw-bold">Calories</div>
+                              100 per serving</li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Sugars</div>
+                              16 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Potassium</div>
+                              350 miligrams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Carbs</div>
+                              26 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Fibers</div>
+                              1 grams
+                            </li>
+                          </ul>
+                        </div>
+                        <!--End Dropdown Section-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="img-and-overlay-container">
+                        <img src="https://images.pexels.com/photos/25482631/pexels-photo-25482631/free-photo-of-watermelon-on-white-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="item-hover-overlay">
+                          <h2>Fruit Name</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur doloremque aut ea vitae eius harum odit saepe maiores ullam error quis eligendi vero, sunt sit sapiente iusto delectus eum!</p>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Watermelon</h5>
+                        <p class="card-text">$5.49 • <span class="stock in-stock">In Stock</span></p>
+                        <button class="btn btn-outline-success" onclick="addItemToCart('Watermelon')" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <!--Dropdown Section-->
+                        <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-8" aria-expanded="false" aria-controls="collapse-section-8">
+                          Info
+                        </button>
+                        <div class="collapse info-collapse" id="collapse-section-8">
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                              <div class="fw-bold">Calories</div>
+                              100 per serving</li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Sugars</div>
+                              16 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Potassium</div>
+                              350 miligrams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Carbs</div>
+                              26 grams
+                            </li>
+                            <li class="list-group-item">
+                              <div class="fw-bold">Fibers</div>
+                              1 grams
+                            </li>
+                          </ul>
+                        </div>
+                        <!--End Dropdown Section-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--End of Vegetables Cards-->
                 <strong>The Vegetables Section is under development</strong> I plan to implement custom pricing for vegetables, such as pricing per lbs, or sizing of vegetables depending on the regions.
               </div>
             </div>
