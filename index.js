@@ -9,6 +9,8 @@ class Item {
         this.userQuantity = 0;
     }
 }
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 //badge elements
 const cartQuantityBadge = document.querySelector(".badge");
@@ -70,6 +72,20 @@ const shopItems = [
         true,
         "",
         "https://images.pexels.com/photos/8093196/pexels-photo-8093196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    ),
+    new Item(
+        "Orange",
+        3.99,
+        true,
+        "",
+        "https://images.pexels.com/photos/9228152/pexels-photo-9228152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ),
+    new Item(
+        "Watermelon",
+        5.49,
+        true,
+        "",
+        "https://images.pexels.com/photos/25482631/pexels-photo-25482631/free-photo-of-watermelon-on-white-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     )
 ]
 
