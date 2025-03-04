@@ -130,7 +130,7 @@ footer {
 
 .shop-items .card {
     height: fit-content;
-    width: 110%;
+    width: 103%;
     transition: border-color 0.25s, box-shadow 0.25s;
 }
 
@@ -181,6 +181,9 @@ footer {
 .shop-items .card-title {
     font-weight: 600;
     font-size: 1.6rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .shop-items .accordion-button:hover{
@@ -199,6 +202,11 @@ footer {
     padding: 10px;
     font-size: 0.9em;
     max-height: 300px;
+}
+
+.row-cols-2 > * 
+{
+    width: 49.25%;
 }
 
 #shop-icon {
@@ -327,8 +335,8 @@ footer {
 
 /*When Screen is bigger than 768px */
 @media (min-width: 768px) {
-    .row-cols-md-5 > * {
-      width: 25%;
+    .row-cols-md-5 > *, .row-cols-2 > * {
+        width: 25%;
     }
 
     .shop-items .card {
