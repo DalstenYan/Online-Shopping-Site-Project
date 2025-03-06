@@ -114,7 +114,10 @@ footer {
 }
 .accordion-body 
 {
-    background: url(https://images.pexels.com/photos/168447/pexels-photo-168447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    /*BG 1: moldy wood with leaves on the left side*/
+    background: url(https://images.pexels.com/photos/139312/pexels-photo-139312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    /*BG 2: clean white-ish wood that contrasts with the text super well */
+    background: url(https://images.pexels.com/photos/172284/pexels-photo-172284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
     background-size: cover;
 }
 
