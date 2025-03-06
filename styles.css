@@ -14,6 +14,9 @@
 {
     display: none;
 }
+.flex {
+    display: flex;
+}
 
 * {
     box-sizing: border-box;
@@ -105,11 +108,25 @@ footer {
 }
 
 /*Shop Elements*/
+.accordion-item 
+{
+    color: white;
+}
+.accordion-body 
+{
+    background: url(https://images.pexels.com/photos/168447/pexels-photo-168447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
+}
 
 .shop-items .accordion-button {
     font-size: min(5vw, 40px);
     font-size: 1.1em;
 
+}
+
+.shop-items .accordion-button:hover{
+    background-color: var(--professional-blue);
+    color: white;
 }
 
 .shop-items .row {
@@ -131,9 +148,9 @@ footer {
 .shop-items .card {
     height: fit-content;
     width: 103%;
+    container-type:inline-size;
     transition: border-color 0.25s, box-shadow 0.25s;
 }
-
 .img-and-hover-container 
 {
     position: relative;
@@ -164,10 +181,15 @@ footer {
     color: #FFF;
     background: rgba(0, 0, 0, .6);
 }
-.item-hover-overlay h2
+.card .item-hover-overlay h2
 {
+    font-size: max(9cqw);
     text-align: center;
     font-weight: bold;
+}
+.card .item-hover-overlay p 
+{
+    font-size: clamp(0.5em, 8cqw, 21px);
 }
 
 .in-stock {
@@ -184,11 +206,6 @@ footer {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-}
-
-.shop-items .accordion-button:hover{
-    background-color: var(--professional-blue);
-    color: white;
 }
 
 .info-collapse
@@ -315,10 +332,6 @@ footer {
     width: fit-content;
 }
 
-
-.flex {
-    display: flex;
-}
 
 /*Shop icon stuff */
 

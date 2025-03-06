@@ -145,7 +145,7 @@ function resetAddedItemQuantity()
 function buttonClickQuantityChange(valueChange) 
 {
     let quantityValueChange = currentItem.userQuantity + valueChange
-    if(quantityValueChange < 0 || quantityValueChange> 99) 
+    if(quantityValueChange < 0 || quantityValueChange > 99) 
         return;
     addedItemQuantity.value = quantityValueChange;
     changeAllQuantities(valueChange);
