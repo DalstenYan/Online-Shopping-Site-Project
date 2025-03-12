@@ -172,3 +172,14 @@ function checkItemExistsAndHasStock(item)
 
     return item.inStock;
 }
+
+//search logic
+const itemSearchBar = document.querySelector("#item-searchbar");
+const searchItemNameBtn = document.querySelector("#search-item-name-btn");
+
+function searchForItem() 
+{
+    let query = itemSearchBar.value.trim();
+    searchItemNameBtn.disabled = true;
+    alert("Still a work in progress! You will soon be able to search for: " + query);
+}

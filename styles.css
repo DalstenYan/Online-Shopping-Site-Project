@@ -43,30 +43,93 @@ footer {
     width: fit-content;
     word-wrap: normal;
     white-space: normal;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand {
     font-size: larger;
     display:table-row;
+    margin-bottom: auto;
 }
 
+.navbar 
+{
+    position: sticky;
+    top:0;
+    z-index: 999;
+    border-bottom:#0D1B2A 1px solid ;
+}
+
+.large-brand 
+{
+    display: none;
+}
+
+.small-brand 
+{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-grow: 10;
+}
+
+.navbar-toggler 
+{
+    flex-grow: 1;
+}
 .nav-btn {
+    display: flex;
     border: none;
     padding: 0;
     background-color: transparent;
     width: 100%;
-    text-align: left;
+    text-align: center;
+}
+.nav-btn-text 
+{
+    display: inline-block;
+    margin-bottom: 0;
+    transition: all 0.5s;
+}
+
+
+#navbarTogglerDemo01
+{
+    min-width: 100%;
+    flex-wrap: wrap;
 }
 
 .small-hover-text {
+    display: inline-block;
+    align-self: center;
+    margin: 0;
+    flex-grow: 1;
     font-style: italic;
     color: transparent;
     transition: color 0.25s;
     font-size: 0.75em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
 }
 
 .nav-link:hover .small-hover-text {
     color: var(--bs-nav-link-color);
+}
+.nav-item:active:not(:last-child)
+{
+    padding-left: 10px;
+    background-color: #0D1B2A;
+}
+.nav-item:active .nav-btn-text, .nav-item:active .small-hover-text
+{
+    color: white;
+}
+.nav-item:last-child 
+{
+    padding-bottom: 0.5rem;
 }
 
 /*Welcome Section*/
@@ -348,6 +411,32 @@ footer {
     background-image: url(https://cdn-icons-png.flaticon.com/512/4297/4297127.png);
 }
 
+.search-btn 
+{
+    min-width: 50px;
+    width: fit-content;
+    transition: padding .25s ease-in-out;
+}
+
+.search-btn:disabled .search-icon
+{
+    opacity: 10%;
+}
+
+.search-btn:hover
+{
+    padding: calc(var(--bs-btn-padding-y) / 2) calc(var(--bs-btn-padding-x) / 2) ;
+}
+
+.search-icon 
+{
+    display: inline-block;
+    background: url(https://cdn-icons-png.flaticon.com/512/54/54481.png) no-repeat;
+    background-size: contain;
+    aspect-ratio: 1/1;
+    height: 100%;
+}
+
 
 /*When Screen is bigger than 768px */
 @media (min-width: 768px) {
@@ -412,5 +501,33 @@ footer {
         background: rgba(0, 0, 0, 0.5);
     }
 
-
   }
+/*When screen is bigger than 575 */
+@media (min-width: 576px) {
+    .small-hover-text 
+    {
+        display: none;
+    }
+    .navbar-nav, .navbar-nav *:not(:last-child), form[role="search"] 
+    {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .small-brand 
+    {
+        display: none;
+    }
+    .large-brand 
+    {
+        display: table-row;
+    }
+    .nav-item:active:not(:last-child)
+    {
+        padding-left: 0;
+    }
+    .nav-item:last-child 
+{
+    padding-bottom: 0;
+}
+}
