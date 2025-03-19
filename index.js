@@ -10,6 +10,7 @@ class Item {
 }
 let allFruits, allVegetables, allMiscellaneous, shopItems;
 
+//Asynchronous JSON data retrieval function 
 async function getJsonData(fileName)
 {
     let response = await fetch(`jsons/${fileName}.json`);
@@ -17,81 +18,14 @@ async function getJsonData(fileName)
     return data;
 }
 
+//Asynchronous variable setter function
 async function setItemContainers()
 {
     allFruits = await getJsonData("fruits");
+    allVegetables = await getJsonData("vegetables");
     shopItems = [...allFruits, ...allVegetables];
     updateItemCards();
 }
-//All Fruit Objects
-
-    // new Item(
-    //     "Apple", 
-    //     6.99, 
-    //     true, 
-    //     "",
-    //      "https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    // ),
-    // new Item(
-    //     "Banana", 
-    //     1.99, 
-    //     true, 
-    //     "",
-    //     "https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    // ),
-    // new Item(
-    //     "Blueberry",
-    //     4.99,
-    //     true,
-    //     "",
-    //     "https://images.pexels.com/photos/131054/pexels-photo-131054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    // ),
-    // new Item(
-    //     "Cantaloupe",
-    //     8.99,
-    //     false,
-    //     "",
-    //     "https://images.pexels.com/photos/7065188/pexels-photo-7065188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    // ),
-    // new Item(
-    //     "Cherry",
-    //     3.99,
-    //     true,
-    //     "",
-    //     "https://images.pexels.com/photos/768009/pexels-photo-768009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    // ),
-    // new Item(
-    //     "Pineapple",
-    //     2.49,
-    //     true,
-    //     "",
-    //     "https://images.pexels.com/photos/8093196/pexels-photo-8093196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    // ),
-    // new Item(
-    //     "Orange",
-    //     3.99,
-    //     true,
-    //     "",
-    //     "https://images.pexels.com/photos/9228152/pexels-photo-9228152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    // ),
-    // new Item(
-    //     "Watermelon",
-    //     5.49,
-    //     true,
-    //     "",
-    //     "https://images.pexels.com/photos/25482631/pexels-photo-25482631/free-photo-of-watermelon-on-white-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    // )
-
-
-allVegetables = [
-    new Item(
-        "Asparagus", 
-        3.49, 
-        true, 
-        "",
-        "https://images.pexels.com/photos/4397814/pexels-photo-4397814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    ),
-];
 
 //Document Loaded
 document.addEventListener("readystatechange", (event) => {
@@ -155,8 +89,6 @@ function updateItemCards()
         }
     });
 }
-
-
 
 function findItemByName(itemName) 
 {
