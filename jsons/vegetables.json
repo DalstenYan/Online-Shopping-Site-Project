@@ -1,0 +1,8 @@
+[
+    {"name": "Asparagus", 
+    "price": 3.49, 
+    "inStock": true,
+    "description": "",
+    "imgURL": "https://images.pexels.com/photos/4397814/pexels-photo-4397814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "userQuantity": 0}
+]

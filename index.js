@@ -1,4 +1,3 @@
-
 class Item {
     constructor(name, price, inStock, description, imgURL) {
         this.name = name;
@@ -9,7 +8,92 @@ class Item {
         this.userQuantity = 0;
     }
 }
-//Toasts
+let allFruits, allVegetables, allMiscellaneous, shopItems;
+
+async function getJsonData(fileName)
+{
+    let response = await fetch(`jsons/${fileName}.json`);
+    let data = await response.json();
+    return data;
+}
+
+async function setItemContainers()
+{
+    allFruits = await getJsonData("fruits");
+    shopItems = [...allFruits, ...allVegetables];
+    updateItemCards();
+}
+//All Fruit Objects
+
+    // new Item(
+    //     "Apple", 
+    //     6.99, 
+    //     true, 
+    //     "",
+    //      "https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    // ),
+    // new Item(
+    //     "Banana", 
+    //     1.99, 
+    //     true, 
+    //     "",
+    //     "https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    // ),
+    // new Item(
+    //     "Blueberry",
+    //     4.99,
+    //     true,
+    //     "",
+    //     "https://images.pexels.com/photos/131054/pexels-photo-131054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    // ),
+    // new Item(
+    //     "Cantaloupe",
+    //     8.99,
+    //     false,
+    //     "",
+    //     "https://images.pexels.com/photos/7065188/pexels-photo-7065188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    // ),
+    // new Item(
+    //     "Cherry",
+    //     3.99,
+    //     true,
+    //     "",
+    //     "https://images.pexels.com/photos/768009/pexels-photo-768009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    // ),
+    // new Item(
+    //     "Pineapple",
+    //     2.49,
+    //     true,
+    //     "",
+    //     "https://images.pexels.com/photos/8093196/pexels-photo-8093196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    // ),
+    // new Item(
+    //     "Orange",
+    //     3.99,
+    //     true,
+    //     "",
+    //     "https://images.pexels.com/photos/9228152/pexels-photo-9228152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    // ),
+    // new Item(
+    //     "Watermelon",
+    //     5.49,
+    //     true,
+    //     "",
+    //     "https://images.pexels.com/photos/25482631/pexels-photo-25482631/free-photo-of-watermelon-on-white-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    // )
+
+
+allVegetables = [
+    new Item(
+        "Asparagus", 
+        3.49, 
+        true, 
+        "",
+        "https://images.pexels.com/photos/4397814/pexels-photo-4397814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    ),
+];
+
+//Document Loaded
 document.addEventListener("readystatechange", (event) => {
     if(event.target.readyState === "complete")
     {
@@ -18,7 +102,7 @@ document.addEventListener("readystatechange", (event) => {
             new bootstrap.Toast(toast).show();
         })
         //2. Parse json
-        fetch("./fruits.json").then(response => response.json()).then(data => console.log(data));
+        setItemContainers();
     }
 })
 
@@ -41,109 +125,38 @@ let currentItem = null;
 
 let cartQuantity = 0;
 
-//All Fruit Objects
-const allFruits = [
-    new Item(
-        "Apple", 
-        6.99, 
-        true, 
-        "",
-         "https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    ),
-    new Item(
-        "Banana", 
-        1.99, 
-        true, 
-        "",
-        "https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    ),
-    new Item(
-        "Blueberry",
-        4.99,
-        true,
-        "",
-        "https://images.pexels.com/photos/131054/pexels-photo-131054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    ),
-    new Item(
-        "Cantaloupe",
-        8.99,
-        false,
-        "",
-        "https://images.pexels.com/photos/7065188/pexels-photo-7065188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    ),
-    new Item(
-        "Cherry",
-        3.99,
-        true,
-        "",
-        "https://images.pexels.com/photos/768009/pexels-photo-768009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    ),
-    new Item(
-        "Pineapple",
-        2.49,
-        true,
-        "",
-        "https://images.pexels.com/photos/8093196/pexels-photo-8093196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    ),
-    new Item(
-        "Orange",
-        3.99,
-        true,
-        "",
-        "https://images.pexels.com/photos/9228152/pexels-photo-9228152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    ),
-    new Item(
-        "Watermelon",
-        5.49,
-        true,
-        "",
-        "https://images.pexels.com/photos/25482631/pexels-photo-25482631/free-photo-of-watermelon-on-white-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    )
-]
-
-const allVegetables = [
-    new Item(
-        "Asparagus", 
-        3.49, 
-        true, 
-        "",
-        "https://images.pexels.com/photos/4397814/pexels-photo-4397814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    ),
-];
-
-const allMiscellaneous = [
-
-];
-
-//All items in the shop
-const shopItems = [...allFruits, ...allVegetables];
-
 //Add click functionality to the buttons
 const allAddCartBtns = document.querySelectorAll(".add-to-cart-btn");
-allAddCartBtns.forEach(addToCartBtn => {
-    let btnAssociatedItemName = addToCartBtn.getAttribute("data-js-shop-item");
-    //For every "Add to cart" button
-    //get their data-js-shop-item attribute string
-    //and pass that to the addItemToCart as the item name
-    if(checkItemExistsAndHasStock(findItemByName(btnAssociatedItemName)))
-    {
-        // addToCartBtn.setAttribute("data-bs-target", "#offcanvasItemDisplay");
-        // addToCartBtn.setAttribute("data-bs-toggle", "offcanvas");
-        // addToCartBtn.setAttribute("aria-controls", "offcanvasItemDisplay");
-        addToCartBtn.addEventListener("click", () => { addItemToCart(btnAssociatedItemName); })
-    }
-    else 
-    {
-        let stockText = addToCartBtn.previousElementSibling.firstElementChild;
-        addToCartBtn.classList.remove("btn-outline-success");
-        addToCartBtn.classList.add("btn-outline-danger", "disabled");
-        addToCartBtn.textContent = "Cannot Add";
-        stockText.classList.remove("in-stock");
-        stockText.classList.add("no-stock");
-        stockText.textContent = "No Stock";
-        //console.log(`${addToCartBtn} has the item: ${btnAssociatedItemName}, and is out of stock`);
-    }
-})
+
+function updateItemCards()
+{
+    allAddCartBtns.forEach(addToCartBtn => {
+        let btnAssociatedItemName = addToCartBtn.getAttribute("data-js-shop-item");
+        //For every "Add to cart" button
+        //get their data-js-shop-item attribute string
+        //and pass that to the addItemToCart as the item name
+        if(checkItemExistsAndHasStock(findItemByName(btnAssociatedItemName)))
+        {
+            // addToCartBtn.setAttribute("data-bs-target", "#offcanvasItemDisplay");
+            // addToCartBtn.setAttribute("data-bs-toggle", "offcanvas");
+            // addToCartBtn.setAttribute("aria-controls", "offcanvasItemDisplay");
+            addToCartBtn.addEventListener("click", () => { addItemToCart(btnAssociatedItemName); })
+        }
+        else 
+        {
+            let stockText = addToCartBtn.previousElementSibling.firstElementChild;
+            addToCartBtn.classList.remove("btn-outline-success");
+            addToCartBtn.classList.add("btn-outline-danger", "disabled");
+            addToCartBtn.textContent = "Cannot Add";
+            stockText.classList.remove("in-stock");
+            stockText.classList.add("no-stock");
+            stockText.textContent = "No Stock";
+            //console.log(`${addToCartBtn} has the item: ${btnAssociatedItemName}, and is out of stock`);
+        }
+    });
+}
+
+
 
 function findItemByName(itemName) 
 {
