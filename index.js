@@ -30,7 +30,8 @@ let currentItem = null;
 
 let cartQuantity = 0;
 
-const shopItems = [
+//All Fruit Objects
+const allFruits = [
     new Item(
         "Apple", 
         6.99, 
@@ -88,6 +89,23 @@ const shopItems = [
         "https://images.pexels.com/photos/25482631/pexels-photo-25482631/free-photo-of-watermelon-on-white-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     )
 ]
+
+const allVegetables = [
+    new Item(
+        "Asparagus", 
+        3.49, 
+        true, 
+        "",
+        "https://images.pexels.com/photos/4397814/pexels-photo-4397814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    ),
+];
+
+const allFlowers = [
+
+];
+
+//All items in the shop
+const shopItems = [...allFruits, ...allVegetables];
 
 function addItemToCart(itemName)
 {
