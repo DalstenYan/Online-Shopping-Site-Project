@@ -1,0 +1,57 @@
+[
+    {"name": "Apple", 
+    "price": 6.99, 
+    "inStock": true,
+    "description": "",
+    "imgURL": "https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "userQuantity": 0},
+    
+    {"name": "Banana",
+    "price": 1.99,
+    "inStock": true,
+    "description": "",
+    "imgURL": "https://images.pexels.com/photos/2872755/pexels-photo-2872755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "userQuantity": 0},
+    
+    {"name": "Blueberry",
+    "price": 4.99,
+    "inStock": true,
+    "description": "",
+    "imgURL": "https://images.pexels.com/photos/131054/pexels-photo-131054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "userQuantity": 0},
+
+    {"name": "Cantaloupe",
+    "price": 8.99,
+    "inStock": false,
+    "description": "",
+    "imgURL": "https://images.pexels.com/photos/7065188/pexels-photo-7065188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "userQuantity": 0},
+
+    {"name": "Cherry",
+    "price": 3.99,
+    "inStock": true,
+    "description": "",
+    "imgURL": "https://images.pexels.com/photos/768009/pexels-photo-768009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "userQuantity": 0},
+
+    {"name": "Pineapple",
+    "price": 2.49,
+    "inStock": true,
+    "description": "",
+    "imgURL": "https://images.pexels.com/photos/8093196/pexels-photo-8093196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "userQuantity": 0},
+
+    {"name": "Orange",
+    "price": 3.99,
+    "inStock": true,
+    "description": "",
+    "imgURL": "https://images.pexels.com/photos/9228152/pexels-photo-9228152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "userQuantity": 0},
+
+    {"name": "Watermelon",
+    "price": 5.49,
+    "inStock": true,
+    "description": "",
+    "imgURL": "https://images.pexels.com/photos/25482631/pexels-photo-25482631/free-photo-of-watermelon-on-white-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "userQuantity": 0}
+]

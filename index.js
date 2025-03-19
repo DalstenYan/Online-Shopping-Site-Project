@@ -9,13 +9,24 @@ class Item {
         this.userQuantity = 0;
     }
 }
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+//Toasts
+document.addEventListener("readystatechange", (event) => {
+    if(event.target.readyState === "complete")
+    {
+        //1. Welcome Toast
+        document.querySelectorAll(".site-load-toast").forEach(toast => {
+            new bootstrap.Toast(toast).show();
+        })
+        //2. Parse json
+        fetch("./fruits.json").then(response => response.json()).then(data => console.log(data));
+    }
+})
 
 //badge elements
 const cartQuantityBadge = document.querySelector(".badge");
 
 //offcanvas item added elements
+const addedItemOffcanvas = new bootstrap.Offcanvas(document.querySelector("#offcanvasItemDisplay"));
 const addedItemName = document.querySelector(".added-item-name");
 const addedItemDesc = document.querySelector(".added-item-desc");
 const addedItemImgDiv = document.querySelector(".added-item-img-container")
@@ -116,9 +127,9 @@ allAddCartBtns.forEach(addToCartBtn => {
     //and pass that to the addItemToCart as the item name
     if(checkItemExistsAndHasStock(findItemByName(btnAssociatedItemName)))
     {
-        // addToCartBtn.setAttribute("data-bs-target", "#offcanvasTop");
+        // addToCartBtn.setAttribute("data-bs-target", "#offcanvasItemDisplay");
         // addToCartBtn.setAttribute("data-bs-toggle", "offcanvas");
-        // addToCartBtn.setAttribute("aria-controls", "offcanvasTop");
+        // addToCartBtn.setAttribute("aria-controls", "offcanvasItemDisplay");
         addToCartBtn.addEventListener("click", () => { addItemToCart(btnAssociatedItemName); })
     }
     else 
@@ -162,6 +173,7 @@ function displayAddedItem()
     addedItemImgDiv.style.backgroundImage = `url(${currentItem.imgURL})`;
     addedItemPrice.innerText = `Item Price: $${currentItem.price}`;
     addedItemExistingQuantity.innerText = `In Cart: ${currentItem.userQuantity}`
+    addedItemOffcanvas.show();
 }
 
 function displayNoItem() 
@@ -171,6 +183,7 @@ function displayNoItem()
     addedItemImgDiv.style.backgroundImage = `url("")`
     addedItemPrice.innerText = `Item Price: Not Specified`;
     addedItemExistingQuantity.innerText = `In Cart: Unknown`
+    addedItemOffcanvas.show();
 }
 
 //From user input in the number field

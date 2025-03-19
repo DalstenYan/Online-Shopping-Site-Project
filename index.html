@@ -85,48 +85,6 @@
       </div>
     </div>
   </nav>
-    <!--<nav class="navbar navbar-expand-sm bg-dark border-bottom border-body" data-bs-theme="dark">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <div class="logotitle">
-              <img src="https://cdn-icons-png.flaticon.com/256/3514/3514242.png" alt="Logo" width="30" height="100%" class="align-text-top">
-                BuyMart Online Shopping
-            </div>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#Introblock">Welcome</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Fruits">
-                  <button class="nav-btn nav-link" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-                    Fruits&nbsp;&nbsp;&nbsp;<span class="small-hover-text">click to open Fruits section</span></button>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Vegetables">
-                  <button class="nav-btn nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                    Vegetables&nbsp;&nbsp;&nbsp;<span class="small-hover-text">click to open Vegetables section</span></button>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown link
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-      </div>
-    </nav>-->
     <div class=""></div>
     <div class="main">  
         <div class="introblock" id="Introblock">
@@ -140,10 +98,7 @@
           <h3 class="responsive-notice">This webpage is responsive! Try resizing the window</h3>
         </div>
 
-        <!--
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
-        -->
-        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasItemDisplay" aria-labelledby="offcanvasTopLabel">
           <div class="offcanvas-header">
             <h3 class="offcanvas-title" id="offcanvasTopLabel">Item added to your cart!</h3>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -195,7 +150,7 @@
                 <div class="row row-cols-2 row-cols-md-4 g-4">
                   <div class="col">
                     <div class="card">
-                      <div class="img-and-overlay-container">
+                      <div class="img-and-overlay-container" tabindex="-1">
                         <img src="https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
                         <div class="item-hover-overlay">
                           <h2>Malus Domestica</h2>
@@ -206,7 +161,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Apple</h5>
                         <p class="card-text">$6.99 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Apple" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Apple">Add to Cart</button>
                         
                         <!--Dropdown test-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-1" aria-expanded="false" aria-controls="collapse-section-1">
@@ -250,7 +205,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Banana</h5>
                         <p class="card-text">$1.99 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Banana" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Banana">Add to Cart</button>
 
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-2" aria-expanded="false" aria-controls="collapse-section-2">
@@ -295,7 +250,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Blueberry</h5>
                         <p class="card-text">$4.99 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Blueberry" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Blueberry">Add to Cart</button>
 
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-3" aria-expanded="false" aria-controls="collapse-section-3">
@@ -340,7 +295,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Cantaloupe</h5>
                         <p class="card-text">$8.99 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Cantaloupe" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Cantaloupe">Add to Cart</button>
 
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-4" aria-expanded="false" aria-controls="collapse-section-4">
@@ -385,7 +340,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Cherry</h5>
                         <p class="card-text">$3.99 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Cherry" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Cherry">Add to Cart</button>
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-5" aria-expanded="false" aria-controls="collapse-section-5">
                           Info
@@ -429,7 +384,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Orange</h5>
                         <p class="card-text">$3.99 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Orange" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Orange">Add to Cart</button>
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-6" aria-expanded="false" aria-controls="collapse-section-6">
                           Info
@@ -473,7 +428,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Pineapple</h5>
                         <p class="card-text">$2.49 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Pineapple" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Pineapple">Add to Cart</button>
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-7" aria-expanded="false" aria-controls="collapse-section-7">
                           Info
@@ -517,7 +472,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Watermelon</h5>
                         <p class="card-text">$5.49 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Watermelon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Watermelon">Add to Cart</button>
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-8" aria-expanded="false" aria-controls="collapse-section-8">
                           Info
@@ -584,7 +539,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Asparagus</h5>
                         <p class="card-text">$3.49 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Asparagus" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Asparagus">Add to Cart</button>
                         
                         <!--Dropdown test-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-v1" aria-expanded="false" aria-controls="collapse-section-v1">
@@ -629,7 +584,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Broccoli</h5>
                         <p class="card-text">$4.99 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Broccoli" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Broccoli">Add to Cart</button>
                         
                         <!--Dropdown test-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-v2" aria-expanded="false" aria-controls="collapse-section-v2">
@@ -674,7 +629,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Carrot</h5>
                         <p class="card-text">$1.99 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Carrot" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Carrot">Add to Cart</button>
                         
                         <!--Dropdown test-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-v3" aria-expanded="false" aria-controls="collapse-section-v3">
@@ -718,7 +673,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Cauliflower</h5>
                         <p class="card-text">$4.59 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Cauliflower" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Cauliflower">Add to Cart</button>
 
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-v4" aria-expanded="false" aria-controls="collapse-section-v4">
@@ -763,7 +718,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Cucumber</h5>
                         <p class="card-text">$2.99 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Cucumber" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Cucumber">Add to Cart</button>
 
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-v5" aria-expanded="false" aria-controls="collapse-section-v5">
@@ -808,7 +763,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Green Onion</h5>
                         <p class="card-text">$4.99 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Green Onion" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add To Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Green Onion">Add To Cart</button>
 
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-v6" aria-expanded="false" aria-controls="collapse-section-v6">
@@ -853,7 +808,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Leaf Lettuce</h5>
                         <p class="card-text">$2.49 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Leaf Lettuce" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Leaf Lettuce">Add to Cart</button>
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-v7" aria-expanded="false" aria-controls="collapse-section-v7">
                           Info
@@ -897,7 +852,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Mushroom</h5>
                         <p class="card-text">$1.49 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Mushroom" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Mushroom">Add to Cart</button>
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-v8" aria-expanded="false" aria-controls="collapse-section-v8">
                           Info
@@ -941,7 +896,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Onion</h5>
                         <p class="card-text">$3.99 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Onion" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Onion">Add to Cart</button>
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-v9" aria-expanded="false" aria-controls="collapse-section-v9">
                           Info
@@ -985,7 +940,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Potato</h5>
                         <p class="card-text">$5.49 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Potato" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Potato">Add to Cart</button>
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-v10" aria-expanded="false" aria-controls="collapse-section-v10">
                           Info
@@ -1029,7 +984,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Radish</h5>
                         <p class="card-text">$0.99 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Radish" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Radish">Add to Cart</button>
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-v11" aria-expanded="false" aria-controls="collapse-section-v11">
                           Info
@@ -1073,7 +1028,7 @@
                       <div class="card-body">
                         <h5 class="card-title">Tomato</h5>
                         <p class="card-text">$2.49 • <span class="stock in-stock">In Stock</span></p>
-                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Tomato" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                        <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Tomato">Add to Cart</button>
                         <!--Dropdown Section-->
                         <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-v12" aria-expanded="false" aria-controls="collapse-section-v12">
                           Info
@@ -1136,7 +1091,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Tulip</h5>
                       <p class="card-text">$6.49 • <span class="stock in-stock">In Stock</span></p>
-                      <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Tulip" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                      <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Tulip">Add to Cart</button>
                       <!--Dropdown Section-->
                       <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-m1" aria-expanded="false" aria-controls="collapse-section-m1">
                         Info
@@ -1180,7 +1135,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Rose</h5>
                       <p class="card-text">$7.99 • <span class="stock in-stock">In Stock</span></p>
-                      <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Rose" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                      <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Rose">Add to Cart</button>
                       <!--Dropdown Section-->
                       <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-v14" aria-expanded="false" aria-controls="collapse-section-v14">
                         Info
@@ -1224,7 +1179,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Sunflower</h5>
                       <p class="card-text">$2.49 • <span class="stock in-stock">In Stock</span></p>
-                      <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Sunflower" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Add to Cart</button>
+                      <button class="btn btn-outline-success add-to-cart-btn" data-js-shop-item="Sunflower">Add to Cart</button>
                       <!--Dropdown Section-->
                       <button class="btn btn-outline-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-section-m3" aria-expanded="false" aria-controls="collapse-section-m3">
                         Info
@@ -1265,7 +1220,7 @@
           </div>
         </div>
     </div>
-
+    <!--Shop Button & Icon-->
     <div id="shop-icon">
       <button class="btn" id="cart-img">
           <span class="position-absolute start-90 translate-middle badge rounded-pill bg-danger" id="cart-quantity-badge">
@@ -1273,6 +1228,33 @@
           </span>
       </button>
     </div>
+    <!--Site toasts-->
+    <div class="toast-container position-fixed bottom-0 end-0 p-2">
+      <!-- <div class="toast site-load-toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <img src="..." class="rounded me-2" alt="...">
+          <strong class="me-auto">BuyMart</strong>
+          <small class="text-body-secondary">just now</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          See? Just like this.
+        </div>
+      </div> -->
+    
+      <div class="toast text-bg-info text-light site-load-toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header text-bg-info text-light">
+          <img src="https://cdn-icons-png.flaticon.com/256/3514/3514242.png" width="20" class="rounded me-2" alt="...">
+          <strong class="me-auto">BuyMart Online Shopping</strong>
+          <small class="text-body-primary">just now</small>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Welcome to BuyMart! Have a look around
+        </div>
+      </div>
+    </div>
+
 </body>
 <footer class="bg-dark">
   <h3>Attributions &amp; Credits</h3>
