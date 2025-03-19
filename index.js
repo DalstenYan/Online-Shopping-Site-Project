@@ -100,16 +100,49 @@ const allVegetables = [
     ),
 ];
 
-const allFlowers = [
+const allMiscellaneous = [
 
 ];
 
 //All items in the shop
 const shopItems = [...allFruits, ...allVegetables];
 
+//Add click functionality to the buttons
+const allAddCartBtns = document.querySelectorAll(".add-to-cart-btn");
+allAddCartBtns.forEach(addToCartBtn => {
+    let btnAssociatedItemName = addToCartBtn.getAttribute("data-js-shop-item");
+    //For every "Add to cart" button
+    //get their data-js-shop-item attribute string
+    //and pass that to the addItemToCart as the item name
+    if(checkItemExistsAndHasStock(findItemByName(btnAssociatedItemName)))
+    {
+        // addToCartBtn.setAttribute("data-bs-target", "#offcanvasTop");
+        // addToCartBtn.setAttribute("data-bs-toggle", "offcanvas");
+        // addToCartBtn.setAttribute("aria-controls", "offcanvasTop");
+        addToCartBtn.addEventListener("click", () => { addItemToCart(btnAssociatedItemName); })
+    }
+    else 
+    {
+        let stockText = addToCartBtn.previousElementSibling.firstElementChild;
+        addToCartBtn.classList.remove("btn-outline-success");
+        addToCartBtn.classList.add("btn-outline-danger", "disabled");
+        addToCartBtn.textContent = "Cannot Add";
+        stockText.classList.remove("in-stock");
+        stockText.classList.add("no-stock");
+        stockText.textContent = "No Stock";
+        //console.log(`${addToCartBtn} has the item: ${btnAssociatedItemName}, and is out of stock`);
+    }
+})
+
+function findItemByName(itemName) 
+{
+    return shopItems.find(i => i.name === itemName);
+}
+
+
 function addItemToCart(itemName)
 {
-    let itemQuery = shopItems.find(i => i.name === itemName)
+    let itemQuery = findItemByName(itemName);
     if(checkItemExistsAndHasStock(itemQuery)) 
     {
         resetAddedItemQuantity();
