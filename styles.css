@@ -90,8 +90,85 @@ footer {
 {
     display: inline-block;
     margin-bottom: 0;
-    transition: all 0.5s;
 }
+
+.dropdown-menu.show 
+{
+    opacity: 0;
+    animation: fadeInFromNone .35s ease .1s forwards;
+    -webkit-animation: fadeInFromNone .35s ease .1s forwards;
+    -moz-animation: fadeInFromNone .35s ease .1s forwards;
+    -o-animation: fadeInFromNone .35s ease .1s forwards;
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: absolute;
+        opacity: 0;
+    }
+
+    100% {
+        display: absolute;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: absolute;
+        opacity: 0;
+    }
+
+    100% {
+        display: absolute;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: absolute;
+        opacity: 0;
+    }
+
+    100% {
+        display: absolute;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: absolute;
+        opacity: 0;
+    }
+
+    100% {
+        display: absolute;
+        opacity: 1;
+    }
+}
+
 
 
 #navbarTogglerDemo01
@@ -195,6 +272,10 @@ footer {
     color: white;
 }
 
+.shop-items .accordion-button:hover::after{
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>");
+}
+
 .shop-items .row {
     justify-content: flex-start;
     align-items: flex-start;
@@ -207,7 +288,7 @@ footer {
 }
 
 .shop-items .card:hover{
-    box-shadow: 4px 4px 6px rgb(181, 181, 181);
+    box-shadow: 4px 4px 6px rgb(61, 61, 61);
     border-color: rgb(45, 45, 45);
 }
 
@@ -217,6 +298,13 @@ footer {
     container-type:inline-size;
     transition: border-color 0.25s, box-shadow 0.25s;
 }
+
+.items-txt-block {
+    background-color: rgba(0, 0, 0, 0.502);
+    margin-top: 16px;
+    padding: .5em;
+}
+
 .img-and-hover-container 
 {
     position: relative;
@@ -239,7 +327,7 @@ footer {
     overflow: hidden;
     transition: opacity 0.35s ease-in-out, color .1s, padding 0.35s;
 }
-.img-and-overlay-container:hover .item-hover-overlay
+.img-and-overlay-container:hover .item-hover-overlay, .img-and-overlay-container:active .item-hover-overlay
 {
     overflow: scroll;
     padding: 15px;
@@ -325,7 +413,6 @@ footer {
 .offcanvas.offcanvas-top, .offcanvas-body 
 {
     height: fit-content;
-    max-height: 45vh;
 }
 
 .offcanvas-body 
@@ -396,6 +483,11 @@ footer {
 
 .outlined-module {
     width: fit-content;
+}
+
+.toast 
+{
+    --bs-bg-opacity: .75;
 }
 
 
